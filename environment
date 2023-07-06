@@ -1,0 +1,17 @@
+# Initialize using environment variables:
+
+# Set the service name. Allowed characters: # a-z, A-Z, 0-9, -, _, and space.
+# If ELASTIC_APM_SERVICE_NAME is not specified, the executable name will be used.
+export ELASTIC_APM_SERVICE_NAME=goling
+
+# Set custom APM Server URL (default: http://localhost:8200)
+export ELASTIC_APM_SERVER_URL=http://10.8.60.176:8200
+
+# Use if APM Server requires a secret token
+export ELASTIC_APM_SECRET_TOKEN=
+
+# Set the service environment
+export ELASTIC_APM_ENVIRONMENT=Staging
+
+export ELASTIC_APM_LOG_FILE=stderr
+export ELASTIC_APM_LOG_LEVEL=debug
