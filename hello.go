@@ -11,8 +11,8 @@ import (
 )
 
 const (
-	apmServer = "http://10.8.60.176:8200"
-	apmName = "goling"
+	apmServer = "https://apm-opty-kalbe.apps.lab.i-3.my.id"
+	apmName = "tester-infra"
 )
 
 
@@ -21,7 +21,7 @@ func main() {
 	os.Setenv("ELASTIC_APM_SERVER_URL", apmServer)
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", baseHandler)
-	http.ListenAndServe(":8080", apmhttp.Wrap(mux))
+	http.ListenAndServe(":8081", apmhttp.Wrap(mux))
 }
 
 func baseHandler(w http.ResponseWriter, r *http.Request) {
