@@ -11,7 +11,7 @@ import (
 )
 
 const (
-	apmServer = "http://apm-opty-kalbe.apps.lab.i-3.my.id"
+	apmServer = "https://apm-opty-kalbe.apps.lab.i-3.my.id"
 	apmName = "tester-infra"
 )
 
