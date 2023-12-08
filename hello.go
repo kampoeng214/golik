@@ -22,6 +22,7 @@ func main() {
 	os.Setenv("ELASTIC_APM_SERVICE_NAME", apmName)
 	os.Setenv("ELASTIC_APM_SERVER_URL", apmServer)
 	os.Setenv("ELASTIC_APM_SECRET_TOKEN", apmSecret)
+	os.Setenv("ELASTIC_APM_VERIFY_SERVER_CERT", verifyServerCert)
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", baseHandler)
 	http.ListenAndServe(":8081", apmhttp.Wrap(mux))
