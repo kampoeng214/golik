@@ -13,7 +13,7 @@ import (
 const (
 	apmServer = "http://apm-opty-kalbe.apps.lab.i-3.my.id"
 	apmName = "tester-infra"
-	apmSecret = "arisky123"
+	apmSecret = "OfX0K5s0i8M37XQ49cnYh77W"
 )
 
 
