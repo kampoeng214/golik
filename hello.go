@@ -13,12 +13,14 @@ import (
 const (
 	apmServer = "http://apm-opty-kalbe.apps.lab.i-3.my.id"
 	apmName = "tester-infra"
+	apmSecret = "arisky123"
 )
 
 
 func main() {
 	os.Setenv("ELASTIC_APM_SERVICE_NAME", apmName)
 	os.Setenv("ELASTIC_APM_SERVER_URL", apmServer)
+	os.Setenv("ELASTIC_APM_SECRET_TOKEN", apmSecret)
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", baseHandler)
 	http.ListenAndServe(":8081", apmhttp.Wrap(mux))
